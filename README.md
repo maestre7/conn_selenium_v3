@@ -1,4 +1,3 @@
-Sure! Here's the README for the provided code:
 
 # Selenium Automation README
 
