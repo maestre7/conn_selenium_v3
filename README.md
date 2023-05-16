@@ -18,23 +18,6 @@ This repository contains a Python code snippet for automating web interactions u
    git clone https://github.com/your-username/your-repository.git
    ```
 
-2. Navigate to the project directory:
-
-   ```
-   cd your-repository
-   ```
-
-3. Install the required packages:
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Download the Chrome driver:
-
-   ```
-   webdriver-manager chrome
-   ```
 
 ## Usage
 
