@@ -82,3 +82,41 @@ Parameters:
 - `selector_type` (str): The type of selector to use (e.g., "xpath", "css_selector", "id", etc.).
 - `path` (str): The path or value of the selector.
 - `keys` (str): The keys to send
+
+## get_elements
+
+Retrieve the elements associated with the given XPath in Selenium.
+
+### Arguments
+
+- `driver` (`webdriver.Chrome`): The Selenium WebDriver instance.
+- `selector_type` (`str`): The type of selector to use (e.g., "xpath", "css_selector", "id", etc.).
+- `path` (`str`): The selector path or value.
+- `wait_time` (`int`): The maximum waiting time for the element to be clickable (in seconds). Default is 30.
+- `control` (`Union[int, None]`): The control parameter specifies whether to retrieve all matching elements (None) or a specific element at the given index. Default is None.
+- `log` (`bool`): Whether to log exceptions as errors or only as information. Default is True.
+
+### Returns
+
+- `Optional[WebElement]`: The retrieved element if found, or None if not found or an exception occurred.
+
+### Raises
+
+- `TimeoutException`: If the element is not clickable within the specified wait time.
+- `ElementClickInterceptedException`: If another element is blocking the action.
+- `AttributeError`: If the selector type is invalid or not supported.
+
+## retrieve_element
+
+Retrieve the element associated with the given selector and path.
+
+### Arguments
+
+- `driver` (`webdriver.Chrome`): The Selenium `webdriver.Chrome` instance.
+- `selector_type` (`str`): The type of selector to use (e.g., 'id', 'class_name', 'xpath', etc.).
+- `path` (`str`): The path or value of the selector.
+- `wait_time` (`int`, optional): The maximum time to wait for the element to be clickable in seconds. Default is 30.
+
+### Returns
+
+- `Optional[WebElement]`: The retrieved element if found, or None if not found or an exception occurred.
