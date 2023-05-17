@@ -79,13 +79,13 @@ def conn_link(headless: bool = True, **kwargs) -> webdriver.Chrome:
     
 
 
-def conn_uc(headless: bool = True, folder: bool = False) -> Chrome:
+def conn_uc(headless: bool = True, folder: str = None) -> Chrome:
     '''Establishes a Selenium connection using undetected_chromedriver module.
 
     Args:
         headless (bool): Whether to run in headless mode (without browser window). Defaults to True.
-        folder (bool or str): Folder path where the UC profile data will be stored. If False, it uses the default folder './uc'. 
-                              If a custom folder path is provided, it will be used. Defaults to False.
+        folder (str): Folder path where the UC profile data will be stored. If None, it uses the default folder './uc'. 
+                              If a custom folder path is provided, it will be used. Defaults to None.
 
     Returns:
         undetected_chromedriver.Chrome: The Selenium WebDriver instance for UC (undetected_chromedriver).
